@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* For Debuging */
+
+/* * {
+  outline: 2px solid red;
+} */
+
+/* CSS RESET */
+
 html,
 body,
 div,
@@ -125,4 +133,16 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/* PrimaryCards */
+
+.primaryCardContainer {
+  background: #ffffff;
+  border: 4px solid #000000;
+
+  /* Shadow */
+  box-shadow: 5px 5px 0px #000000, 4px 4px 0px #000000, 3px 3px 0px #000000,
+    2px 2px 0px #000000, 1px 1px 0px #000000;
+  border-radius: 14px;
 }
