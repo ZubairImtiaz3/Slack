@@ -5,18 +5,21 @@ import primaryCardBtn from "../../assets/svgs/primaryCardBtn.svg";
 
 const primaryCards = [
   {
+    id: 1,
     heading: "Bring Your Team Together",
     discription:
       "At the heart of Slack are channels: organized spaces for everyone and everything you need for work. In channels, it’s easier to connect across departments, offices, time zones and even other companies.",
     buttonTitle: "More about channels",
   },
   {
+    id: 2,
     heading: "Choose how you want to work",
     discription:
       "In Slack, you’ve got all the flexibility to work when, where and how it’s best for you. You can easily chat, send audio and video clips, or hop on a huddle to talk things out live.",
     buttonTitle: "Flexible Communication",
   },
   {
+    id: 3,
     heading: "Move faster with your tools in one place",
     discription:
       "With your other work apps connected to Slack, you can work faster by switching tabs less. And with powerful tools like Workflow Builder, you can automate away routine tasks.",
@@ -29,7 +32,10 @@ function PrimaryCards() {
     <>
       <div className="primaryCards max-w-[85%] mx-auto font-syne space-y-14">
         {primaryCards.map((card) => (
-          <div className="primaryCardContainer flex max-w-[75rem] h-auto lg:h-[20.625rem]">
+          <div
+            key={card.id}
+            className="primaryCardContainer flex max-w-[75rem] h-auto lg:h-[20.625rem]"
+          >
             <div className="leftItems bg-yellow-500 w-[50%] h-full hidden md:block border-solid border-r-2 border-black"></div>
 
             <div className="rightItems md:w-[50%] w-[100%]">

@@ -10,6 +10,7 @@ import nasa from "../assets/images/nasa.png";
 import uber from "../assets/images/uber.png";
 import jeem from "../assets/images/jeem.png";
 import epartner from "../assets/images/epartner.png";
+import heroRightVector from "../assets/images/heroRightVector.png";
 
 //Components
 import PrimaryCards from "./components/PrimaryCards";
@@ -17,18 +18,23 @@ import PrimaryCards from "./components/PrimaryCards";
 //Partners
 const partners = [
   {
+    id: 1,
     image: unknownpartner,
   },
   {
+    id: 2,
     image: nasa,
   },
   {
+    id: 3,
     image: uber,
   },
   {
+    id: 4,
     image: jeem,
   },
   {
+    id: 5,
     image: epartner,
   },
 ];
@@ -62,7 +68,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="rightItemsContainer bg-[#FFC700] w-[50%] hidden md:block"></div>
+        <div className="rightItemsContainer bg-[#FFC700] w-[50%] hidden md:flex justify-center items-center">
+          <Image className="w-full" src={heroRightVector} alt="vector" />
+        </div>
       </div>
 
       <div className="partners font-syne flex flex-col justify-center items-center mt-[4.375rem] mb-20">
@@ -83,7 +91,11 @@ export default function Home() {
 
         <div className="partnersLogoContainer flex flex-col md:flex-row items-center mt-14 gap-24">
           {partners.map((partnersContent) => (
-            <Image src={partnersContent.image} alt="vector" />
+            <Image
+              key={partnersContent.id}
+              src={partnersContent.image}
+              alt="vector"
+            />
           ))}
         </div>
       </div>
